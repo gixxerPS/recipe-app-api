@@ -5,9 +5,19 @@ rest api course
 
     docker-compose up
 
-## setup docker
+## docker compose commands
+
+### run tests
+
+    docker-compose run --rm app sh -c "python manage.py test"
+
+### collectstatistics
 
     docker-compose run --rm app sh -c "python manage.py collectstatistic"
+
+### run lint
+
+    docker-compose run --rm app sh -c "flake8"
 
 ## init django project structure
 
@@ -17,6 +27,6 @@ rest api course
 
     docker-compose run --rm app sh -c "flake8"
 
-### notes
+## notes
 
 flake8 -> Linting
