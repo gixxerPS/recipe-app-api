@@ -1,11 +1,27 @@
 # recipe-app-api
 rest api course
 
+- python backend with rest api
+- docker
+- postgreSQL
+- django
+- test-driven-development
+- github actions -> auto perform tasks like lint and run unit tests
+
 ## run dev server
 
     docker-compose up
 
 ## docker compose commands
+
+### build
+
+    docker-compose build
+
+### run start / stop
+
+    docker-compose up
+    docker-compose down
 
 ### run tests
 
