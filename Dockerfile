@@ -1,6 +1,7 @@
 FROM python:3.9-alpine3.13
 LABEL maintainer="db-es.com"
 
+# Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /tmp/requirements.txt
@@ -9,7 +10,10 @@ COPY ./app /app
 WORKDIR /app
 EXPOSE 8000
 
+# Set argument DEV as false by default
 ARG DEV=false
+
+# Install all the required packages
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     apk add --update --no-cache postgresql-client && \
@@ -26,6 +30,7 @@ RUN python -m venv /py && \
         --no-create-home \
         django-user
 
+# Add py env to path. run from everywhere. YAY
 ENV PATH="/py/bin:$PATH"
 
 USER django-user

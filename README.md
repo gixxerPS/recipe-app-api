@@ -32,6 +32,16 @@ rest api course
 
     docker-compose run --rm app sh -c "flake8"
 
+### create superuser
+
+    docker-compose run --rm app sh -c "python manage.py createsuperuser"
+
+admin@example.com
+dockeriscool321
+
+user@example.com
+test12345678
+
 ### collectstatistics
 
     docker-compose run --rm app sh -c "python manage.py collectstatistic"
@@ -48,3 +58,13 @@ rest api course
 ## notes
 
 flake8 -> Linting
+
+debugging:
+
+https://londonappdeveloper.com/debugging-a-dockerized-django-app-with-vscode/
+
+list docker volumes
+    docker volume ls
+
+automated API documentation:
+drf-spectacular
