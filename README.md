@@ -42,6 +42,15 @@ dockeriscool321
 user@example.com
 test12345678
 
+user2@example.com
+Awesome!123
+
+### startapp user
+
+    docker-compose run --rm app sh -c "python manage.py startapp user"
+
+creates folder structure for user app
+
 ### collectstatistics
 
     docker-compose run --rm app sh -c "python manage.py collectstatistic"
