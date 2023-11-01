@@ -11,7 +11,7 @@ rest api course
 
 ## docker compose commands
 
-## start/stop dev server
+### start/stop dev server
 
     docker-compose up
     docker-compose down
@@ -45,11 +45,21 @@ test12345678
 user2@example.com
 Awesome!123
 
+### make migrations
+
+    docker-compose run --rm app sh -c "python manage.py makemigrations"
+
 ### startapp user
 
     docker-compose run --rm app sh -c "python manage.py startapp user"
 
 creates folder structure for user app
+
+### startapp recipe
+
+    docker-compose run --rm app sh -c "python manage.py startapp recipe"
+
+creates folder structure for recipe app
 
 ### collectstatistics
 
