@@ -87,3 +87,42 @@ list docker volumes
 
 automated API documentation:
 drf-spectacular
+
+## usage
+
+server is running on port 8000
+http://localhost:8000/
+
+### authenticate
+
+http://localhost:8000/api/docs/
+
+use /api/user/token/ with one of the above usernames, and passwords
+(in swagger click try it out)
+
+click authenticate on top of the page and paste the returned token like
+
+Token <token>
+e.g.
+Token 09a76cefb5fd09c4a66a8624d99b71d43a96ec28
+
+### post recipe
+
+/api/recipe/recipes/
+
+
+{
+  "title": "Recipe 1",
+  "time_minutes": 100,
+  "price": "2.50",
+  "link": "example.com",
+  "tags": [
+    {
+      "name": "tag1"
+    },
+    {
+      "name": "tag2"
+    }
+  ],
+  "description": "my sample description"
+}
