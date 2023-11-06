@@ -65,6 +65,9 @@ creates folder structure for recipe app
 
     docker-compose run --rm app sh -c "python manage.py collectstatistic"
 
+### gather static files
+
+    docker-compose run --rm app sh -c "python manage.py collectstatic"
 
 ## init django project structure
 
