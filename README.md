@@ -49,6 +49,10 @@ Awesome!123
 
     docker-compose run --rm app sh -c "python manage.py makemigrations"
 
+### apply migrations
+
+    docker-compose run --rm app sh -c "python manage.py migrate"
+
 ### startapp user
 
     docker-compose run --rm app sh -c "python manage.py startapp user"
